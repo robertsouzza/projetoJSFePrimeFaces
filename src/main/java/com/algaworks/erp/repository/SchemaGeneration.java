@@ -12,8 +12,10 @@ public class SchemaGeneration {
 
 	public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("AlgaWorksPU");
+      
 
         EntityManager em = emf.createEntityManager();
+        
 
         List<Empresa> lista = em.createQuery("from Empresa", Empresa.class).getResultList();
 
